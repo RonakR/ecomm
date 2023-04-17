@@ -32,7 +32,10 @@
     },
     "/login": {
       "post": {
-        "description": "",
+        "tags": [
+          "Auth"
+        ],
+        "description": "Login a user",
         "parameters": [],
         "responses": {
           "200": {
@@ -43,7 +46,10 @@
     },
     "/logout": {
       "get": {
-        "description": "",
+        "tags": [
+          "Auth"
+        ],
+        "description": "Logout a user",
         "parameters": [],
         "responses": {
           "200": {
