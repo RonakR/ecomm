@@ -12,12 +12,16 @@ const connectDB = require('./db/connect')
 // express
 const express = require("express")
 require('express-async-errors')
-const app = express()
+
+// other packages
+const morgan = require('morgan')
 
 // middleware
 const notFoundMiddleware = require('./middleware/not-found')
 const errorHandlerMiddleware = require('./middleware/error-handler')
 
+const app = express()
+app.use(morgan('tiny'))
 app.use(express.json())
 
 app.get('/', (req, res) => {
