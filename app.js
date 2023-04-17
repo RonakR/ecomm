@@ -1,23 +1,22 @@
 // env vars
-import * as dotenv from 'dotenv'
-dotenv.config()
+require('dotenv').config()
 
 // postman
-import postman from '@postman/postman-sdk'
+const postman = require('@postman/postman-sdk')
 // treblle
-import treblle from '@treblle/express'
+const treblle = require('@treblle/express')
 
 // db
-import connectDB from "./db/connect.js"
+const connectDB = require('./db/connect')
 
 // express
-import express from "express";
-import * as expressAsyncErrors from 'express-async-errors'
+const express = require("express")
+require('express-async-errors')
 const app = express()
 
 // middleware
-import notFoundMiddleware from './middleware/not-found.js'
-import errorHandlerMiddleware from './middleware/error-handler.js'
+const notFoundMiddleware = require('./middleware/not-found')
+const errorHandlerMiddleware = require('./middleware/error-handler')
 
 app.use(express.json())
 
