@@ -20,6 +20,9 @@ const morgan = require('morgan')
 const notFoundMiddleware = require('./middleware/not-found')
 const errorHandlerMiddleware = require('./middleware/error-handler')
 
+// routers
+const authRouter = require('./routes/authRoutes')
+
 const app = express()
 app.use(morgan('tiny'))
 app.use(express.json())
@@ -28,16 +31,14 @@ app.get('/', (req, res) => {
   res.send('e-comm api')
 })
 
+app.use('/api/v1/auth', authRouter)
+
 app.use(notFoundMiddleware)
 app.use(errorHandlerMiddleware)
 
 const port = process.env.PORT || 5000
 const start = async () => {
   try {
-    // db connect
-    await connectDB(process.env.MONGO_URL)
-    // server start
-    app.listen(port, console.log(`Server is listening on port ${port}...`))
     // postman telemetry
     postman.initialize({
       collectionId: '24422144-78465df7-cb85-4077-b864-80a0638f6af8',
@@ -52,6 +53,10 @@ const start = async () => {
         additionalFieldsToMask: [],
       })
     )
+    // db connect
+    await connectDB(process.env.MONGO_URL)
+    // server start
+    app.listen(port, console.log(`Server is listening on port ${port}...`))
   } catch (error) {
     console.log(error)
   }
