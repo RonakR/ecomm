@@ -1,0 +1,159 @@
+{
+	"info": {
+		"_postman_id": "588eb003-e4e7-47f0-9738-3960b756447f",
+		"name": "eComm",
+		"description": "E-Commerce API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "24492028-588eb003-e4e7-47f0-9738-3960b756447f"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register a new user",
+					"id": "a5da5d0a-5b8d-49ba-a67c-85f89e88b442",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/register",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"register"
+							]
+						},
+						"description": "Register a new user"
+					},
+					"response": [
+						{
+							"id": "1e4e4304-912b-461f-b5aa-e2b37eff343c",
+							"name": "OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/register",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"register"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": []
+						}
+					]
+				},
+				{
+					"name": "Login a user",
+					"id": "1693ae2f-a106-446d-b3ca-206e248789f0",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/login",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"login"
+							]
+						},
+						"description": "Login a user"
+					},
+					"response": [
+						{
+							"id": "9281c2fe-a181-4233-aacc-1ffbefa94413",
+							"name": "OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/login",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": []
+						}
+					]
+				},
+				{
+					"name": "Logout a user",
+					"id": "78256919-ad63-4626-bb08-115b13c3f8ad",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/logout",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"logout"
+							]
+						},
+						"description": "Logout a user"
+					},
+					"response": [
+						{
+							"id": "e63706d2-84d9-4d18-b365-ae00ce73c795",
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/logout",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"logout"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": []
+						}
+					]
+				}
+			],
+			"id": "917b56ab-0765-421f-83a5-bf3f1776d7d8"
+		}
+	],
+	"variable": [
+		{
+			"id": "ef7dc896-7341-47bf-93e9-8f7bda49474c",
+			"key": "baseUrl",
+			"value": "http://localhost:5000/"
+		}
+	]
+}
