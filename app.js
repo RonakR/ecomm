@@ -10,7 +10,7 @@ const treblle = require('@treblle/express')
 const connectDB = require('./db/connect')
 
 // express
-const express = require("express")
+const express = require('express')
 require('express-async-errors')
 
 // other packages
@@ -42,8 +42,8 @@ const start = async () => {
     postman.initialize({
       collectionId: '24422144-78465df7-cb85-4077-b864-80a0638f6af8',
       apiKey: process.env.POSTMAN_API_KEY,
-      enable: true
-    });
+      enable: true,
+    })
     // treblle telemetry
     app.use(
       treblle({
