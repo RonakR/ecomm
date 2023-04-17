@@ -1,4 +1,8 @@
 const register = async (req, res) => {
+  /**
+   * #swagger.tags = ['Auth']
+   * #swagger.description = 'Register a new user'
+   */
   res.send('register')
 }
 

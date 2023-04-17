@@ -4,7 +4,9 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon app.js"
+    "start": "nodemon app.js",
+    "swagger": "node swagger.js",
+    "prepare": "husky install"
   },
   "author": "",
   "license": "ISC",
@@ -26,13 +28,12 @@
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.0.8",
     "morgan": "^1.10.0",
+    "swagger-autogen": "^2.23.1",
     "validator": "^13.6.0",
     "xss-clean": "^0.1.1"
   },
   "devDependencies": {
-    "nodemon": "^2.0.9"
-  },
-  "engines": {
-    "node": "14.x"
+    "nodemon": "^2.0.9",
+    "husky": "^8.0.0"
   }
 }
