@@ -26,6 +26,11 @@ const authRouter = require('./routes/authRoutes')
 const app = express()
 app.use(morgan('tiny'))
 app.use(express.json())
+// treblle telemetry
+useTreblle(app, {
+  apiKey: process.env.TREBLLE_API_KEY,
+  projectId: process.env.TREBLLE_PROJECT_ID,
+})
 
 app.get('/', (req, res) => {
   res.send('e-comm api')
@@ -45,11 +50,7 @@ const start = async () => {
       apiKey: process.env.POSTMAN_API_KEY,
       enable: true,
     })
-    // treblle telemetry
-    useTreblle(app, {
-      apiKey: process.env.TREBLLE_API_KEY,
-      projectId: process.env.TREBLLE_PROJECT_ID,
-    })
+
     // db connect
     await connectDB(process.env.MONGO_URL)
     // server start
