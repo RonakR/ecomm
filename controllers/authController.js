@@ -1,9 +1,15 @@
+const User = require('../models/User')
+const { StatusCodes } = require('http-status-codes')
+const CustomError = require('../errors')
+
 const register = async (req, res) => {
   /**
    * #swagger.tags = ['Auth']
    * #swagger.description = 'Register a new user'
    */
-  res.send('register')
+  const { name, password, email } = req.body
+  const user = await User.create({ name, password, email })
+  res.status(StatusCodes.CREATED).json({ user })
 }
 
 const login = async (req, res) => {

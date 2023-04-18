@@ -31,6 +31,12 @@ useTreblle(app, {
   apiKey: process.env.TREBLLE_API_KEY,
   projectId: process.env.TREBLLE_PROJECT_ID,
 })
+// postman telemetry
+postman.initialize({
+  collectionId: '24422144-78465df7-cb85-4077-b864-80a0638f6af8',
+  apiKey: process.env.POSTMAN_API_KEY,
+  enable: true,
+})
 
 app.get('/', (req, res) => {
   res.send('e-comm api')
@@ -44,13 +50,6 @@ app.use(errorHandlerMiddleware)
 const port = process.env.PORT || 5000
 const start = async () => {
   try {
-    // postman telemetry
-    postman.initialize({
-      collectionId: '24422144-78465df7-cb85-4077-b864-80a0638f6af8',
-      apiKey: process.env.POSTMAN_API_KEY,
-      enable: true,
-    })
-
     // db connect
     await connectDB(process.env.MONGO_URL)
     // server start

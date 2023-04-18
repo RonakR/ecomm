@@ -23,9 +23,25 @@
         ],
         "description": "Register a new user",
         "parameters": [],
-        "responses": {
-          "200": {
-            "description": "OK"
+        "responses": {},
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "example": "any"
+                  },
+                  "password": {
+                    "example": "any"
+                  },
+                  "email": {
+                    "example": "any"
+                  }
+                }
+              }
+            }
           }
         }
       }
