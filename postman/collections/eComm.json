@@ -155,11 +155,34 @@
 			"id": "68fb0ae1-9414-490c-951d-dbf67bff0b6c"
 		}
 	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "b92f10f9-191b-41d6-9177-38f323e4b44b",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "e55df59d-9b09-438a-a1f1-0e8e94f7105f",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
 	"variable": [
 		{
-			"id": "d44b89e2-e8f4-4389-b8d9-d5954c98adff",
+			"id": "e57e4246-726e-4d88-ace5-d2ace2b73051",
 			"key": "baseUrl",
-			"value": "http://localhost:5000/api/v1"
+			"value": "http://localhost:5000/api/v1",
+			"disabled": true
 		}
 	]
 }
