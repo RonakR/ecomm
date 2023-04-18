@@ -1,10 +1,10 @@
 {
 	"info": {
-		"_postman_id": "588eb003-e4e7-47f0-9738-3960b756447f",
+		"_postman_id": "02a6eb4c-47e2-4709-a453-9266c598991c",
 		"name": "eComm",
 		"description": "E-Commerce API",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_uid": "24492028-588eb003-e4e7-47f0-9738-3960b756447f"
+		"_uid": "24492028-02a6eb4c-47e2-4709-a453-9266c598991c"
 	},
 	"item": [
 		{
@@ -12,7 +12,7 @@
 			"item": [
 				{
 					"name": "Register a new user",
-					"id": "a5da5d0a-5b8d-49ba-a67c-85f89e88b442",
+					"id": "9ea1272d-8739-4649-8ca2-a06761f066c0",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -20,11 +20,12 @@
 						"method": "POST",
 						"header": [],
 						"url": {
-							"raw": "{{baseUrl}}/register",
+							"raw": "{{baseUrl}}/auth/register",
 							"host": [
 								"{{baseUrl}}"
 							],
 							"path": [
+								"auth",
 								"register"
 							]
 						},
@@ -32,17 +33,18 @@
 					},
 					"response": [
 						{
-							"id": "1e4e4304-912b-461f-b5aa-e2b37eff343c",
+							"id": "8040777e-4441-4d18-b75f-04050bc5e459",
 							"name": "OK",
 							"originalRequest": {
 								"method": "POST",
 								"header": [],
 								"url": {
-									"raw": "{{baseUrl}}/register",
+									"raw": "{{baseUrl}}/auth/register",
 									"host": [
 										"{{baseUrl}}"
 									],
 									"path": [
+										"auth",
 										"register"
 									]
 								}
@@ -57,7 +59,7 @@
 				},
 				{
 					"name": "Login a user",
-					"id": "1693ae2f-a106-446d-b3ca-206e248789f0",
+					"id": "96afda44-195d-48f4-ad90-8b6499b443e0",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -65,11 +67,12 @@
 						"method": "POST",
 						"header": [],
 						"url": {
-							"raw": "{{baseUrl}}/login",
+							"raw": "{{baseUrl}}/auth/login",
 							"host": [
 								"{{baseUrl}}"
 							],
 							"path": [
+								"auth",
 								"login"
 							]
 						},
@@ -77,17 +80,18 @@
 					},
 					"response": [
 						{
-							"id": "9281c2fe-a181-4233-aacc-1ffbefa94413",
+							"id": "c020fc63-63f4-4fe9-8001-98bc4f6e38d0",
 							"name": "OK",
 							"originalRequest": {
 								"method": "POST",
 								"header": [],
 								"url": {
-									"raw": "{{baseUrl}}/login",
+									"raw": "{{baseUrl}}/auth/login",
 									"host": [
 										"{{baseUrl}}"
 									],
 									"path": [
+										"auth",
 										"login"
 									]
 								}
@@ -102,7 +106,7 @@
 				},
 				{
 					"name": "Logout a user",
-					"id": "78256919-ad63-4626-bb08-115b13c3f8ad",
+					"id": "216d2ea3-94f9-4a7d-9d67-4e654c2eea21",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -110,11 +114,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{baseUrl}}/logout",
+							"raw": "{{baseUrl}}/auth/logout",
 							"host": [
 								"{{baseUrl}}"
 							],
 							"path": [
+								"auth",
 								"logout"
 							]
 						},
@@ -122,17 +127,18 @@
 					},
 					"response": [
 						{
-							"id": "e63706d2-84d9-4d18-b365-ae00ce73c795",
+							"id": "3ce5b972-4b04-4670-8853-f333127247c1",
 							"name": "OK",
 							"originalRequest": {
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{baseUrl}}/logout",
+									"raw": "{{baseUrl}}/auth/logout",
 									"host": [
 										"{{baseUrl}}"
 									],
 									"path": [
+										"auth",
 										"logout"
 									]
 								}
@@ -146,14 +152,14 @@
 					]
 				}
 			],
-			"id": "917b56ab-0765-421f-83a5-bf3f1776d7d8"
+			"id": "68fb0ae1-9414-490c-951d-dbf67bff0b6c"
 		}
 	],
 	"variable": [
 		{
-			"id": "ef7dc896-7341-47bf-93e9-8f7bda49474c",
+			"id": "d44b89e2-e8f4-4389-b8d9-d5954c98adff",
 			"key": "baseUrl",
-			"value": "http://localhost:5000/"
+			"value": "http://localhost:5000/api/v1"
 		}
 	]
 }
