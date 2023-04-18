@@ -4,7 +4,7 @@ require('dotenv').config()
 // postman
 const postman = require('@postman/postman-sdk')
 // treblle
-const treblle = require('@treblle/express')
+const { useTreblle } = require('treblle')
 
 // db
 const connectDB = require('./db/connect')
@@ -46,13 +46,10 @@ const start = async () => {
       enable: true,
     })
     // treblle telemetry
-    app.use(
-      treblle({
-        apiKey: process.env.TREBLLE_API_KEY,
-        projectId: process.env.TREBLLE_PROJECT_ID,
-        additionalFieldsToMask: [],
-      })
-    )
+    useTreblle(app, {
+      apiKey: process.env.TREBLLE_API_KEY,
+      projectId: process.env.TREBLLE_PROJECT_ID,
+    })
     // db connect
     await connectDB(process.env.MONGO_URL)
     // server start
