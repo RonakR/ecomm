@@ -31,7 +31,7 @@ app.get('/', (req, res) => {
   res.send('e-comm api')
 })
 
-app.use('/api/v1/auth', authRouter)
+app.use('/api/v1', authRouter)
 
 app.use(notFoundMiddleware)
 app.use(errorHandlerMiddleware)

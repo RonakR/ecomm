@@ -16,7 +16,7 @@
     }
   ],
   "paths": {
-    "/register": {
+    "/auth/register": {
       "post": {
         "tags": [
           "Auth"
@@ -30,7 +30,7 @@
         }
       }
     },
-    "/login": {
+    "/auth/login": {
       "post": {
         "tags": [
           "Auth"
@@ -44,7 +44,7 @@
         }
       }
     },
-    "/logout": {
+    "/auth/logout": {
       "get": {
         "tags": [
           "Auth"
