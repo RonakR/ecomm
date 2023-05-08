@@ -22,6 +22,7 @@ require('express-async-errors')
 
 // other packages
 const morgan = require('morgan')
+const cookieParse = require('cookie-parser')
 
 // middleware
 const notFoundMiddleware = require('./middleware/not-found')
@@ -29,10 +30,13 @@ const errorHandlerMiddleware = require('./middleware/error-handler')
 
 // routers
 const authRouter = require('./routes/authRoutes')
+const cookieParser = require('cookie-parser')
 
 const app = express()
 app.use(morgan('tiny'))
 app.use(express.json())
+app.use(cookieParser(process.env.JWT_SECRET))
+
 // treblle telemetry
 useTreblle(app, {
   apiKey: process.env.TREBLLE_API_KEY,
@@ -43,6 +47,7 @@ app.get('/', (req, res) => {
   res.send('e-comm api')
 })
 
+//! this naming is for swagger reasons
 app.use('/api/v1', authRouter)
 
 app.use(notFoundMiddleware)
