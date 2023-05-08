@@ -124,7 +124,7 @@
       }
     },
     "/users/updateUser": {
-      "post": {
+      "patch": {
         "tags": [
           "User"
         ],
@@ -138,7 +138,7 @@
       }
     },
     "/users/updateUserPassword": {
-      "post": {
+      "patch": {
         "tags": [
           "User"
         ],
