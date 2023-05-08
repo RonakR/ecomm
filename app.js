@@ -4,11 +4,13 @@ require('dotenv').config()
 // postman
 const postman = require('@postman/postman-sdk')
 // postman telemetry
-postman.initialize({
-  collectionId: process.env.POSTMAN_COLLECTION_ID,
-  apiKey: process.env.POSTMAN_API_KEY,
-  enable: true,
-})
+if (process.env.NODE_ENV === 'production') {
+  postman.initialize({
+    collectionId: process.env.POSTMAN_COLLECTION_ID,
+    apiKey: process.env.POSTMAN_API_KEY,
+    enable: true,
+  })
+}
 
 // treblle
 const { useTreblle } = require('treblle')
