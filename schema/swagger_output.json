@@ -23,7 +23,11 @@
         ],
         "description": "Register a new user",
         "parameters": [],
-        "responses": {},
+        "responses": {
+          "201": {
+            "description": "Created"
+          }
+        },
         "requestBody": {
           "content": {
             "application/json": {

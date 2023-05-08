@@ -7,6 +7,7 @@ const register = async (req, res) => {
   /**
    * #swagger.tags = ['Auth']
    * #swagger.description = 'Register a new user'
+   * #swagger.responses[201] = {}
    */
   const { name, password, email } = req.body
   const user = await User.create({ name, password, email })
