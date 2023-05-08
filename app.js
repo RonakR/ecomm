@@ -3,6 +3,13 @@ require('dotenv').config()
 
 // postman
 const postman = require('@postman/postman-sdk')
+// postman telemetry
+postman.initialize({
+  collectionId: '24422144-887b1173-5ea8-4dad-8df2-07cc4602ef4c',
+  apiKey: process.env.POSTMAN_API_KEY,
+  enable: true,
+})
+
 // treblle
 const { useTreblle } = require('treblle')
 
@@ -30,12 +37,6 @@ app.use(express.json())
 useTreblle(app, {
   apiKey: process.env.TREBLLE_API_KEY,
   projectId: process.env.TREBLLE_PROJECT_ID,
-})
-// postman telemetry
-postman.initialize({
-  collectionId: '24422144-78465df7-cb85-4077-b864-80a0638f6af8',
-  apiKey: process.env.POSTMAN_API_KEY,
-  enable: true,
 })
 
 app.get('/', (req, res) => {
