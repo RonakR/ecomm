@@ -32,6 +32,7 @@ const errorHandlerMiddleware = require('./middleware/error-handler')
 
 // routers
 const authRouter = require('./routes/authRoutes')
+const userRouter = require('./routes/userRoutes')
 const cookieParser = require('cookie-parser')
 
 const app = express()
@@ -51,6 +52,7 @@ app.get('/', (req, res) => {
 
 //! this naming is for swagger reasons
 app.use('/api/v1', authRouter)
+app.use('/api/v1', userRouter)
 
 app.use(notFoundMiddleware)
 app.use(errorHandlerMiddleware)
