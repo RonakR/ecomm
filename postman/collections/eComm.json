@@ -1,10 +1,10 @@
 {
 	"info": {
-		"_postman_id": "02a6eb4c-47e2-4709-a453-9266c598991c",
+		"_postman_id": "c402b411-8caf-4b0e-911f-d42bfc95e944",
 		"name": "eComm",
 		"description": "E-Commerce API",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_uid": "24492028-02a6eb4c-47e2-4709-a453-9266c598991c"
+		"_uid": "24492028-c402b411-8caf-4b0e-911f-d42bfc95e944"
 	},
 	"item": [
 		{
@@ -12,13 +12,28 @@
 			"item": [
 				{
 					"name": "Register a new user",
-					"id": "9ea1272d-8739-4649-8ca2-a06761f066c0",
+					"id": "cabe4422-7148-4d0f-bce5-dd1c6abeac5c",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
 					"request": {
 						"method": "POST",
-						"header": [],
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"any\",\n  \"password\": \"any\",\n  \"email\": \"any\"\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
 						"url": {
 							"raw": "{{baseUrl}}/auth/register",
 							"host": [
@@ -33,11 +48,26 @@
 					},
 					"response": [
 						{
-							"id": "8040777e-4441-4d18-b75f-04050bc5e459",
-							"name": "OK",
+							"id": "2023ff6d-8301-4318-a48e-afa03844ef03",
+							"name": "Created",
 							"originalRequest": {
 								"method": "POST",
-								"header": [],
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"any\",\n  \"password\": \"any\",\n  \"email\": \"any\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
 								"url": {
 									"raw": "{{baseUrl}}/auth/register",
 									"host": [
@@ -49,8 +79,8 @@
 									]
 								}
 							},
-							"status": "OK",
-							"code": 200,
+							"status": "Created",
+							"code": 201,
 							"_postman_previewlanguage": "text",
 							"header": [],
 							"cookie": []
@@ -59,13 +89,28 @@
 				},
 				{
 					"name": "Login a user",
-					"id": "96afda44-195d-48f4-ad90-8b6499b443e0",
+					"id": "2bc0fda5-5a5e-45d0-9bc5-52756ec96e4c",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
 					"request": {
 						"method": "POST",
-						"header": [],
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"any\",\n  \"password\": \"any\"\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
 						"url": {
 							"raw": "{{baseUrl}}/auth/login",
 							"host": [
@@ -80,11 +125,26 @@
 					},
 					"response": [
 						{
-							"id": "c020fc63-63f4-4fe9-8001-98bc4f6e38d0",
+							"id": "22a2e114-f0f8-4382-88f5-abde640dfd91",
 							"name": "OK",
 							"originalRequest": {
 								"method": "POST",
-								"header": [],
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"email\": \"any\",\n  \"password\": \"any\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
 								"url": {
 									"raw": "{{baseUrl}}/auth/login",
 									"host": [
@@ -106,7 +166,7 @@
 				},
 				{
 					"name": "Logout a user",
-					"id": "216d2ea3-94f9-4a7d-9d67-4e654c2eea21",
+					"id": "5868ef1d-c129-4f81-9988-3d2d314ae766",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -127,7 +187,7 @@
 					},
 					"response": [
 						{
-							"id": "3ce5b972-4b04-4670-8853-f333127247c1",
+							"id": "e3b13b11-42e3-4c87-92a8-d0fa5ed404d2",
 							"name": "OK",
 							"originalRequest": {
 								"method": "GET",
@@ -152,37 +212,266 @@
 					]
 				}
 			],
-			"id": "68fb0ae1-9414-490c-951d-dbf67bff0b6c"
-		}
-	],
-	"event": [
-		{
-			"listen": "prerequest",
-			"script": {
-				"id": "b92f10f9-191b-41d6-9177-38f323e4b44b",
-				"type": "text/javascript",
-				"exec": [
-					""
-				]
-			}
+			"id": "b7386661-e1ad-4635-bb7d-d8dd2b7f23ae"
 		},
 		{
-			"listen": "test",
-			"script": {
-				"id": "e55df59d-9b09-438a-a1f1-0e8e94f7105f",
-				"type": "text/javascript",
-				"exec": [
-					""
-				]
-			}
+			"name": "User",
+			"item": [
+				{
+					"name": "Get All Users",
+					"id": "f2b7ef83-429b-4259-8285-f7ce3c66b5a6",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/users/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"users",
+								""
+							]
+						},
+						"description": "Get All Users"
+					},
+					"response": [
+						{
+							"id": "637ba971-513b-4872-84c1-7af12b952ebe",
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/users/",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"users",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": []
+						}
+					]
+				},
+				{
+					"name": "Show Current User",
+					"id": "ce94c0e0-8f8e-4233-9ed2-61caeeeec8a2",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/users/showMe",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"users",
+								"showMe"
+							]
+						},
+						"description": "Show Current User"
+					},
+					"response": [
+						{
+							"id": "bc980672-1621-4398-b737-c454defbde96",
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/users/showMe",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"users",
+										"showMe"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": []
+						}
+					]
+				},
+				{
+					"name": "Update User",
+					"id": "04f11bc8-1830-44e1-af38-60993eab6f90",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/users/updateUser",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"users",
+								"updateUser"
+							]
+						},
+						"description": "Update User"
+					},
+					"response": [
+						{
+							"id": "32cb80a5-242a-4591-9c1a-6be858a18ac7",
+							"name": "OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/users/updateUser",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"users",
+										"updateUser"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": []
+						}
+					]
+				},
+				{
+					"name": "Update User Password",
+					"id": "582078bb-5719-4d01-b981-a04cb5ebc2f5",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/users/updateUserPassword",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"users",
+								"updateUserPassword"
+							]
+						},
+						"description": "Update User Password"
+					},
+					"response": [
+						{
+							"id": "8c304148-4fc5-40c1-8b84-5bb55b534d01",
+							"name": "OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/users/updateUserPassword",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"users",
+										"updateUserPassword"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": []
+						}
+					]
+				},
+				{
+					"name": "Get Single User",
+					"id": "d730bfd3-a028-43b2-81d2-de38f0f6a834",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/users/:id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"users",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "e"
+								}
+							]
+						},
+						"description": "Get Single User"
+					},
+					"response": [
+						{
+							"id": "087963ad-c74b-4552-886d-c9ea1751a93f",
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/users/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"users",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": []
+						}
+					]
+				}
+			],
+			"id": "f14d6868-53e1-4117-9785-f03c8a6ead6a"
 		}
 	],
 	"variable": [
 		{
-			"id": "e57e4246-726e-4d88-ace5-d2ace2b73051",
+			"id": "bc45ecb6-f881-4d18-8d57-3bbb3cb72314",
 			"key": "baseUrl",
-			"value": "http://localhost:5000/api/v1",
-			"disabled": true
+			"value": "http://localhost:5000/api/v1"
 		}
 	]
 }
