@@ -9,8 +9,11 @@ const register = async (req, res) => {
    * #swagger.description = 'Register a new user'
    * #swagger.responses[201] = {}
    */
+  // first registered user is an admin
+  const isFirstAccount = (await User.countDocuments({})) === 0
+  const role = isFirstAccount ? 'admin' : 'user'
   const { name, password, email } = req.body
-  const user = await User.create({ name, password, email })
+  const user = await User.create({ name, password, email, role })
 
   const tokenUser = {
     name: user.name,
