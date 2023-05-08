@@ -1,9 +1,14 @@
+const User = require('../models/User')
+const { StatusCodes } = require('http-status-codes')
+const CustomError = require('../errors')
+
 const getAllUsers = async (req, res) => {
   /**
    * #swagger.tags = ['User']
    * #swagger.description = 'Get All Users'
    */
-  res.send('get all users')
+  const users = await User.find({ role: 'user' }).select('-password')
+  res.status(StatusCodes.OK).send({ users })
 }
 
 const getSingleUser = async (req, res) => {
@@ -11,7 +16,11 @@ const getSingleUser = async (req, res) => {
    * #swagger.tags = ['User']
    * #swagger.description = 'Get Single User'
    */
-  res.send('get single users')
+  const user = await User.find({ _id: req.params.id }).select('-password')
+  if (!user) {
+    throw new CustomError.NotFoundError(`No user with id: ${req.params.id}`)
+  }
+  res.status(StatusCodes.OK).send({ user })
 }
 
 const showCurrentUser = async (req, res) => {

@@ -102,11 +102,7 @@
         ],
         "description": "Get All Users",
         "parameters": [],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
+        "responses": {}
       }
     },
     "/users/showMe": {
@@ -167,11 +163,7 @@
             }
           }
         ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
+        "responses": {}
       }
     }
   }
