@@ -5,7 +5,7 @@ require('dotenv').config()
 const postman = require('@postman/postman-sdk')
 // postman telemetry
 postman.initialize({
-  collectionId: '24422144-887b1173-5ea8-4dad-8df2-07cc4602ef4c',
+  collectionId: process.env.POSTMAN_COLLECTION_ID,
   apiKey: process.env.POSTMAN_API_KEY,
   enable: true,
 })
