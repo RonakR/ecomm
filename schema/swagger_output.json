@@ -137,7 +137,7 @@
         }
       }
     },
-    "/users/updateUserPassowrd": {
+    "/users/updateUserPassword": {
       "post": {
         "tags": [
           "User"

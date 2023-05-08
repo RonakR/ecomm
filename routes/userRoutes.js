@@ -12,7 +12,7 @@ const {
 router.get('/users/', getAllUsers)
 router.get('/users/showMe', showCurrentUser)
 router.post('/users/updateUser', updateUser)
-router.post('/users/updateUserPassowrd', updateUserPassword)
+router.post('/users/updateUserPassword', updateUserPassword)
 
 router.get('/users/:id', getSingleUser)
 
