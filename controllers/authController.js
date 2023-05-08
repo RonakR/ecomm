@@ -42,7 +42,7 @@ const login = async (req, res) => {
   if (!isPasswordCorrect) {
     throw new CustomError.UnauthenticatedError('Invalid credentials')
   }
-  res.send('login user', user)
+  res.send('user logged in')
 }
 
 const logout = async (req, res) => {
@@ -50,7 +50,11 @@ const logout = async (req, res) => {
    * #swagger.tags = ['Auth']
    * #swagger.description = 'Logout a user'
    */
-  res.send('logout')
+  res.cookie('token', 'logout', {
+    httpOnly: true,
+    expires: new Date(Date.now()),
+  })
+  res.send('user logged out')
 }
 
 module.exports = {
