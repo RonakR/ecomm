@@ -50,6 +50,11 @@ app.get('/', (req, res) => {
   res.send('e-comm api')
 })
 
+app.get('/api/v1', (req, res) => {
+  console.log(req.signedCookies)
+  res.send('e-commerce api')
+})
+
 //! this naming is for swagger reasons
 app.use('/api/v1', authRouter)
 app.use('/api/v1', userRouter)

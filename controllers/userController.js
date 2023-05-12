@@ -7,6 +7,7 @@ const getAllUsers = async (req, res) => {
    * #swagger.tags = ['User']
    * #swagger.description = 'Get All Users'
    */
+  console.log('user', req.user)
   const users = await User.find({ role: 'user' }).select('-password')
   res.status(StatusCodes.OK).send({ users })
 }
