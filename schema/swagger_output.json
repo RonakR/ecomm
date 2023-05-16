@@ -57,11 +57,7 @@
         ],
         "description": "Login a user",
         "parameters": [],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        },
+        "responses": {},
         "requestBody": {
           "content": {
             "application/json": {
