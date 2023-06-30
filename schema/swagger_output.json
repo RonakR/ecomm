@@ -132,9 +132,22 @@
         ],
         "description": "Update User Password",
         "parameters": [],
-        "responses": {
-          "200": {
-            "description": "OK"
+        "responses": {},
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "oldPassword": {
+                    "example": "any"
+                  },
+                  "newPassword": {
+                    "example": "any"
+                  }
+                }
+              }
+            }
           }
         }
       }

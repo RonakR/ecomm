@@ -20,7 +20,7 @@ router.get(
 )
 router.get('/users/showMe', authenticateUser, showCurrentUser)
 router.patch('/users/updateUser', updateUser)
-router.patch('/users/updateUserPassword', updateUserPassword)
+router.patch('/users/updateUserPassword', authenticateUser, updateUserPassword)
 
 router.get('/users/:id', authenticateUser, getSingleUser)
 
