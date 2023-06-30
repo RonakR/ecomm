@@ -29,7 +29,7 @@ const showCurrentUser = async (req, res) => {
    * #swagger.tags = ['User']
    * #swagger.description = 'Show Current User'
    */
-  res.send('show current user')
+  res.status(StatusCodes.OK).json({ user: req.user })
 }
 
 const updateUser = async (req, res) => {

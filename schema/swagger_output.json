@@ -108,11 +108,7 @@
         ],
         "description": "Show Current User",
         "parameters": [],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
+        "responses": {}
       }
     },
     "/users/updateUser": {
