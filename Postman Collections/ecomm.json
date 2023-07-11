@@ -1,0 +1,483 @@
+{
+	"info": {
+		"_postman_id": "cb3a8b96-7eef-46ae-8114-1f62a8c7534a",
+		"name": "eComm",
+		"description": "E-Commerce API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register a new user",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "f5801fb8-8110-466d-b428-b9eea5d8bbb0",
+								"exec": [
+									"// set local variables",
+									"const name = pm.variables.replaceIn('{{$randomFirstName}}')",
+									"const email = pm.variables.replaceIn('{{$randomEmail}}')",
+									"const password = pm.variables.replaceIn('{{$randomPassword}}')",
+									"console.log(name, email, password)",
+									"// set environment variables",
+									"pm.environment.set(\"name\", name)",
+									"pm.environment.set(\"email\", email)",
+									"pm.environment.set(\"password\", password)"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "ab8a6762-9c40-412a-ad41-da62d6612fd2",
+								"exec": [
+									"var jsonData = pm.response.json();",
+									"pm.environment.set(\"userId\", jsonData.user.userId)",
+									"",
+									"pm.test(\"Status code is 201\", function () {",
+									"    pm.response.to.have.status(201);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "845b8382-2f44-4bb8-ba85-8ad53caf56d9",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"{{name}}\",\n    \"email\": \"{{email}}\",\n    \"password\": \"{{password}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseUrl}}/auth/register",
+						"description": "Register a new user"
+					},
+					"response": [
+						{
+							"id": "88da56a3-1963-40fe-b0d3-35e28ca45e44",
+							"name": "OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": "{{baseUrl}}/auth/register"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": [],
+							"responseTime": null,
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "Login a user",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "dd6d7c67-b36d-4184-b0dd-62a82e9d9160",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "f5516a01-c693-47bb-b446-f63bad7de0e7",
+								"exec": [
+									"pm.test(\"Token available as Cookie\", function () {",
+									"    token = pm.cookies.get('token')",
+									"    pm.expect(token).to.not.be.undefined",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "89299335-d577-4046-b935-e9f4ccf940bd",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"{{email}}\",\n    \"password\": \"{{password}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseUrl}}/auth/login",
+						"description": "Login a user"
+					},
+					"response": [
+						{
+							"id": "05434cf4-e4a9-420b-999f-2e5ab3a1690d",
+							"name": "OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": "{{baseUrl}}/auth/login"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": [],
+							"responseTime": null,
+							"body": null
+						}
+					]
+				}
+			],
+			"id": "d8a4fdff-53fa-4246-9802-fd94745a0639"
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Get All Users",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "4a367f1f-f95e-4e08-b3c2-629f93575810",
+								"exec": [
+									"pm.test(\"Status code is 403\", function () {",
+									"    pm.response.to.have.status(403);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "d6452e63-f6c5-4bf7-967d-c7289501314b",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{baseUrl}}/users/",
+						"description": "Get All Users"
+					},
+					"response": [
+						{
+							"id": "eb3132ea-ee8a-4c32-ad88-82c2685f7fc3",
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "{{baseUrl}}/users/"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": [],
+							"responseTime": null,
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "Show Current User",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "6d69d483-0ecc-4123-81f8-4c839cc5cbd5",
+								"exec": [
+									"pm.test(\"Validate Schema\", function () {",
+									"    const {user} = pm.response.json();",
+									"    // Check name",
+									"    pm.expect(user).to.have.property('name');",
+									"    pm.expect(user.name).to.be.a(\"string\")",
+									"    // Check userId   ",
+									"    pm.expect(user).to.have.property('userId');",
+									"    pm.expect(user.userId).to.be.a(\"string\")",
+									"    // Check fact",
+									"    pm.expect(user).to.have.property('role');",
+									"    pm.expect(user.role).to.be.a(\"string\")",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "c593011c-4534-44b5-9745-ddbb5cb9bed2",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{baseUrl}}/users/showMe",
+						"description": "Show Current User"
+					},
+					"response": [
+						{
+							"id": "a3d29570-1ae3-4b8a-b2e4-c38eceb4a13e",
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "{{baseUrl}}/users/showMe"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": [],
+							"responseTime": null,
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "Update User",
+					"id": "c9eee846-bd55-4211-8f5b-0e2d637e6ed2",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": "{{baseUrl}}/users/updateUser",
+						"description": "Update User"
+					},
+					"response": [
+						{
+							"id": "f6f33e40-78ca-4cd2-92fb-502e080ea168",
+							"name": "OK",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"url": "{{baseUrl}}/users/updateUser"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": [],
+							"responseTime": null,
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "Update User Password",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "dce66c79-707d-4262-b031-b9cac1e42981",
+								"exec": [
+									"const newPassword = pm.variables.replaceIn('{{$randomPassword}}')",
+									"pm.variables.set(\"oldPassword\", pm.environment.get('password'))",
+									"pm.environment.set('password', newPassword)"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "ed63cc93-7a04-459e-9ad4-eb68b48d5a44",
+								"exec": [
+									"pm.test(\"Validate Schema\", function () {",
+									"    const {msg} = pm.response.json();",
+									"    // Check name",
+									"    pm.expect(msg).to.be.a(\"string\")",
+									"    pm.expect(msg).to.include(\"Success! Password Updated\")",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "5d3fc641-2ac8-4142-b32e-e566277d5440",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"oldPassword\": \"{{oldPassword}}\",\n    \"newPassword\": \"{{password}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseUrl}}/users/updateUserPassword",
+						"description": "Update User Password"
+					},
+					"response": [
+						{
+							"id": "6545ccca-dfaf-4bc0-8c40-57d089ee23eb",
+							"name": "OK",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"url": "{{baseUrl}}/users/updateUserPassword"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": [],
+							"responseTime": null,
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "Get Single User",
+					"id": "49f9eb2f-5f92-41cf-9ead-aa112fb0375d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{baseUrl}}/users/{{userId}}",
+						"description": "Get Single User"
+					},
+					"response": [
+						{
+							"id": "a16942ea-b959-4443-b23c-5e2866be2f6f",
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/users/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"users",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": [],
+							"responseTime": null,
+							"body": null
+						}
+					]
+				}
+			],
+			"id": "fd449b34-b7d1-4cdb-bad8-155fa7a43d45"
+		},
+		{
+			"name": "Get base",
+			"id": "be900b0a-8162-4b41-9c75-f73f7d99677e",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{baseUrl}}/"
+			},
+			"response": []
+		},
+		{
+			"name": "Logout a user",
+			"id": "dc7e6801-87b5-4c13-b61c-39ce719c263b",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{baseUrl}}/auth/logout",
+				"description": "Logout a user"
+			},
+			"response": [
+				{
+					"id": "e2870148-6b6c-4414-97ce-15d52d5a5a07",
+					"name": "OK",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": "{{baseUrl}}/auth/logout"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "text",
+					"header": [],
+					"cookie": [],
+					"responseTime": null,
+					"body": null
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "6aefe1e6-9ceb-4581-bef5-3cbddd0219e4",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "5bf89a83-d26c-4599-8dbb-25726a9ec1a7",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "b2bf565b-29f6-404f-a135-9d2061560a95",
+			"key": "baseUrl",
+			"value": ""
+		}
+	]
+}
