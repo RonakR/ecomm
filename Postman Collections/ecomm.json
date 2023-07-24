@@ -59,7 +59,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"name\": \"{{name}}\",\n    \"email\": \"{{email}}\",\n    \"password\": \"{{password}}\"\n}",
+							"raw": "{\n    \"name\": \"{{name}}\",\n    \"email\": \"{{email}}\",\n    \"password\": \"{{password}}\",\n    \"phoneNumber: 843\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -475,7 +475,7 @@
 	],
 	"variable": [
 		{
-			"id": "b2bf565b-29f6-404f-a135-9d2061560a95",
+			"id": "2450ed58-6611-42ab-9d41-63e7e7ef8bdf",
 			"key": "baseUrl",
 			"value": ""
 		}
