@@ -29,7 +29,7 @@ const login = async (req, res) => {
    * #swagger.summary = 'Login a user'
    * #swagger.description = "Logs a user in, returns a cookie"
    * #swagger.responses[200] = {
-   *  decription: Logs a user in
+   * decription: Logs a user in
    * }
    */
   const { email, password } = req.body
