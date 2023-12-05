@@ -1,7 +1,11 @@
 const swaggerAutogen = require('swagger-autogen')({ openapi: '3.0.0' })
 
 const outputFile = './schema/swagger_output.json'
-const endpointsFiles = ['./routes/authRoutes.js', './routes/userRoutes.js']
+const endpointsFiles = [
+  './app.js/',
+  './routes/authRoutes.js',
+  './routes/userRoutes.js',
+]
 
 const doc = {
   'x-apiname': 'ecomm',
