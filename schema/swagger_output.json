@@ -370,7 +370,9 @@
     }
   },
   "x-apiname": "ecomm",
-  "security": {
-    "BasicAuth": []
-  }
+  "security": [
+    {
+      "BasicAuth": []
+    }
+  ]
 }

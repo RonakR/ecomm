@@ -29,9 +29,7 @@ const doc = {
       description: 'prod server',
     },
   ],
-  security: {
-    BasicAuth: [],
-  },
+  security: [{ BasicAuth: [] }],
 }
 
 swaggerAutogen(outputFile, endpointsFiles, doc)
