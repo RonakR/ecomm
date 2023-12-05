@@ -8,7 +8,7 @@ const register = async (req, res) => {
    * #swagger.tags = ['Auth']
    * #swagger.summary = 'Register a new user'
    * #swagger.description = 'Registers a user as admin or regular user'
-   * #swagger.responses[201] = { description: 'User registered successfully.' }
+   * #swagger.responses[201] = { description: 'User registered successfully' }
    */
   // first registered user is an admin
   const isFirstAccount = (await User.countDocuments({})) === 0
@@ -28,9 +28,7 @@ const login = async (req, res) => {
    * #swagger.tags = ['Auth']
    * #swagger.summary = 'Login a user'
    * #swagger.description = "Logs a user in, returns a cookie"
-   * #swagger.responses[200] = {
-   * decription: Logs a user in
-   * }
+   * #swagger.responses[200] = { decription: "User logged in successfully" }
    */
   const { email, password } = req.body
   if (!email || !password) {

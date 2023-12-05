@@ -30,7 +30,7 @@
         "description": "Registers a user as admin or regular user",
         "responses": {
           "201": {
-            "description": "User registered successfully."
+            "description": "User registered successfully"
           }
         },
         "requestBody": {
@@ -63,8 +63,9 @@
         "summary": "Login a user",
         "description": "Logs a user in, returns a cookie",
         "responses": {
-          "default": {
-            "description": ""
+          "200": {
+            "decription": "User logged in successfully",
+            "description": "OK"
           }
         },
         "requestBody": {
