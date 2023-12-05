@@ -56,13 +56,7 @@ useTreblle(app, {
 // })
 
 //! this naming is for swagger reasons
-app.use(
-  '/api/v1',
-  authRouter
-  /* 
-      #swagger.tags = ['Auth']
-  */
-)
+app.use('/api/v1', authRouter)
 app.use('/api/v1', userRouter)
 
 app.use(notFoundMiddleware)
