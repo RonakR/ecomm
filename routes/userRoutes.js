@@ -14,7 +14,7 @@ const {
 } = require('../middleware/authentication')
 
 router.get(
-  '/users/',
+  '/users',
   [authenticateUser, authenticatePermissions('admin')],
   getAllUsers
 )
