@@ -26,6 +26,7 @@
         "tags": [
           "Auth"
         ],
+        "summary": "Registers a user as admin or regular user",
         "description": "Register a new user",
         "responses": {
           "default": {
@@ -59,6 +60,7 @@
         "tags": [
           "Auth"
         ],
+        "summary": "Logs a user in, returns a cookie",
         "description": "Login a user",
         "responses": {
           "default": {
@@ -89,6 +91,7 @@
         "tags": [
           "Auth"
         ],
+        "summary": "Ends a user's session by expiring the cookie",
         "description": "Logout a user",
         "responses": {
           "default": {
