@@ -52,11 +52,6 @@
             "description": ""
           }
         },
-        "security": [
-          {
-            "apiKeyAuth": []
-          }
-        ],
         "requestBody": {
           "content": {
             "application/json": {
@@ -90,11 +85,6 @@
             "description": ""
           }
         },
-        "security": [
-          {
-            "apiKeyAuth": []
-          }
-        ],
         "requestBody": {
           "content": {
             "application/json": {
@@ -124,12 +114,7 @@
           "default": {
             "description": ""
           }
-        },
-        "security": [
-          {
-            "apiKeyAuth": []
-          }
-        ]
+        }
       }
     },
     "/api/v1/users/": {
@@ -384,5 +369,8 @@
       }
     }
   },
-  "x-apiname": "ecomm"
+  "x-apiname": "ecomm",
+  "security": {
+    "BasicAuth": []
+  }
 }

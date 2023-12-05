@@ -61,10 +61,6 @@ app.use(
   authRouter
   /* 
       #swagger.tags = ['Auth']
-
-      #swagger.security = [{
-          "apiKeyAuth": []
-      }]
   */
 )
 app.use('/api/v1', userRouter)
