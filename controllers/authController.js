@@ -58,7 +58,7 @@ const logout = async (req, res) => {
    * #swagger.tags = ['Auth']
    * #swagger.summary = 'Logout a user'
    * #swagger.description = "Ends a user's session by expiring the cookie"
-   * #swagger.responses[200] = { description: 'Ends a user's session' }
+   * #swagger.responses[200] = { description: "Ends a user's session" }
    */
   res.cookie('token', 'logout', {
     httpOnly: true,

@@ -95,8 +95,8 @@
         "summary": "Logout a user",
         "description": "Ends a user's session by expiring the cookie",
         "responses": {
-          "default": {
-            "description": ""
+          "200": {
+            "description": "Ends a user's session"
           }
         }
       }
