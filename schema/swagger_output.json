@@ -23,9 +23,6 @@
   "paths": {
     "/auth/register": {
       "post": {
-        "tags": [
-          "Auth"
-        ],
         "description": "Register a new user",
         "responses": {
           "default": {
@@ -56,9 +53,6 @@
     },
     "/auth/login": {
       "post": {
-        "tags": [
-          "Auth"
-        ],
         "description": "Login a user",
         "responses": {
           "default": {
@@ -86,9 +80,6 @@
     },
     "/auth/logout": {
       "get": {
-        "tags": [
-          "Auth"
-        ],
         "description": "Logout a user",
         "responses": {
           "default": {

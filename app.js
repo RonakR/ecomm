@@ -56,7 +56,17 @@ app.get('/api/v1', (req, res) => {
 })
 
 //! this naming is for swagger reasons
-app.use('/api/v1', authRouter)
+app.use(
+  '/api/v1',
+  authRouter
+  /* 
+      #swagger.tags = ['Auth']
+
+      #swagger.security = [{
+          "apiKeyAuth": []
+      }]
+  */
+)
 app.use('/api/v1', userRouter)
 
 app.use(notFoundMiddleware)
