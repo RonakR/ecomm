@@ -29,8 +29,8 @@
         "summary": "Register a new user",
         "description": "Registers a user as admin or regular user",
         "responses": {
-          "default": {
-            "description": ""
+          "201": {
+            "description": "User registered successfully."
           }
         },
         "requestBody": {

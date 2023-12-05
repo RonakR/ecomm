@@ -8,9 +8,7 @@ const register = async (req, res) => {
    * #swagger.tags = ['Auth']
    * #swagger.summary = 'Register a new user'
    * #swagger.description = 'Registers a user as admin or regular user'
-   * #swagger.responses[201] = {
-   *  description: "201 - Register a new user"
-   * }
+   * #swagger.responses[201] = { description: 'User registered successfully.' }
    */
   // first registered user is an admin
   const isFirstAccount = (await User.countDocuments({})) === 0
