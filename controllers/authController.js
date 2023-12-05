@@ -9,7 +9,7 @@ const register = async (req, res) => {
    * #swagger.summary = 'Register a new user'
    * #swagger.description = 'Registers a user as admin or regular user'
    * #swagger.responses[201] = {
-   *  description: '201 - Register a new user'
+   *  description: "201 - Register a new user"
    * }
    */
   // first registered user is an admin
