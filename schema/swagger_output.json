@@ -22,10 +22,9 @@
           "Auth"
         ],
         "description": "Register a new user",
-        "parameters": [],
         "responses": {
-          "201": {
-            "description": "Created"
+          "default": {
+            "description": ""
           }
         },
         "requestBody": {
@@ -56,8 +55,11 @@
           "Auth"
         ],
         "description": "Login a user",
-        "parameters": [],
-        "responses": {},
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
         "requestBody": {
           "content": {
             "application/json": {
@@ -83,10 +85,9 @@
           "Auth"
         ],
         "description": "Logout a user",
-        "parameters": [],
         "responses": {
-          "200": {
-            "description": "OK"
+          "default": {
+            "description": ""
           }
         }
       }
@@ -97,8 +98,11 @@
           "User"
         ],
         "description": "Get All Users",
-        "parameters": [],
-        "responses": {}
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
       }
     },
     "/users/showMe": {
@@ -107,8 +111,11 @@
           "User"
         ],
         "description": "Show Current User",
-        "parameters": [],
-        "responses": {}
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
       }
     },
     "/users/updateUser": {
@@ -117,7 +124,6 @@
           "User"
         ],
         "description": "Update User",
-        "parameters": [],
         "responses": {
           "200": {
             "description": "OK"
@@ -131,8 +137,11 @@
           "User"
         ],
         "description": "Update User Password",
-        "parameters": [],
-        "responses": {},
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
         "requestBody": {
           "content": {
             "application/json": {
@@ -168,7 +177,11 @@
             }
           }
         ],
-        "responses": {}
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
       }
     }
   }

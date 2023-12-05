@@ -7,7 +7,9 @@ const register = async (req, res) => {
   /**
    * #swagger.tags = ['Auth']
    * #swagger.description = 'Register a new user'
-   * #swagger.responses[201] = {}
+   * #swagger.responses[201] = {
+   *  description: 'Registers a new user'
+   * }
    */
   // first registered user is an admin
   const isFirstAccount = (await User.countDocuments({})) === 0
@@ -26,6 +28,9 @@ const login = async (req, res) => {
   /**
    * #swagger.tags = ['Auth']
    * #swagger.description = 'Login a user'
+   * #swagger.responses[200] = {
+   *  decription: Logs a user in
+   * }
    */
   const { email, password } = req.body
   if (!email || !password) {
@@ -54,6 +59,9 @@ const logout = async (req, res) => {
   /**
    * #swagger.tags = ['Auth']
    * #swagger.description = 'Logout a user'
+   * #swagger.responses[200] = {
+   *  description: 'Ends a user's session'
+   * }
    */
   res.cookie('token', 'logout', {
     httpOnly: true,

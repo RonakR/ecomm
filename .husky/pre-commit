@@ -3,3 +3,4 @@
 
 npm run swagger
 git add schema/swagger_output.json
+# postman api lint schema/swagger_output.json
