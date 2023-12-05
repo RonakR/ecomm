@@ -3,7 +3,12 @@
   "info": {
     "version": "1.0.0",
     "title": "E-Comm",
-    "description": "E-Commerce API"
+    "description": "E-Commerce API",
+    "contact": {
+      "name": "Ronak",
+      "email": "admin@admin.com",
+      "url": "https://ecomm-k4ks.onrender.com/api/v1"
+    }
   },
   "servers": [
     {

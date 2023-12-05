@@ -9,6 +9,11 @@ const doc = {
     version: '1.0.0', // by default: '1.0.0'
     title: 'E-Comm', // by default: 'REST API'
     description: 'E-Commerce API', // by default: ''
+    contact: {
+      name: 'Ronak',
+      email: 'admin@admin.com',
+      url: 'https://ecomm-k4ks.onrender.com/api/v1',
+    },
   },
   servers: [
     {
