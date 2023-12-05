@@ -4,6 +4,7 @@ const outputFile = './schema/swagger_output.json'
 const endpointsFiles = ['./routes/authRoutes.js', './routes/userRoutes.js']
 
 const doc = {
+  'x-apiname': 'ecomm',
   info: {
     version: '1.0.0', // by default: '1.0.0'
     title: 'E-Comm', // by default: 'REST API'
