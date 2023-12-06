@@ -2,5 +2,5 @@
 . "$(dirname -- "$0")/_/husky.sh"
 
 npm run swagger
-git add schema/swagger_output.json
 postman api lint ab85f29b-f241-4e8b-83bf-5432841f8154 --integration-id 154211
+git add schema/swagger_output.json
