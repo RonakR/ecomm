@@ -17,12 +17,12 @@ const doc = {
   },
   servers: [
     {
-      url: 'http://localhost:5000/api/v1',
-      description: 'local server',
-    },
-    {
       url: 'https://ecomm-k4ks.onrender.com/api/v1',
       description: 'prod server',
+    },
+    {
+      url: 'http://localhost:5000/api/v1',
+      description: 'local server',
     },
   ],
   security: [{ BasicAuth: [] }],
