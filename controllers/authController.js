@@ -28,7 +28,7 @@ const login = async (req, res) => {
    * #swagger.tags = ['Auth']
    * #swagger.summary = 'Login a user'
    * #swagger.description = "Logs a user in, returns a cookie"
-   * #swagger.responses[200] = { decription: "User logged in successfully" }
+   * #swagger.responses[200] = { description: "User logged in successfully" }
    */
   const { email, password } = req.body
   if (!email || !password) {

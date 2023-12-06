@@ -64,8 +64,7 @@
         "description": "Logs a user in, returns a cookie",
         "responses": {
           "200": {
-            "decription": "User logged in successfully",
-            "description": "OK"
+            "description": "User logged in successfully"
           }
         },
         "requestBody": {
