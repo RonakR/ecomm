@@ -105,7 +105,8 @@
         "tags": [
           "User"
         ],
-        "description": "Get All Users",
+        "summary": "Get All Users",
+        "description": "",
         "responses": {
           "default": {
             "description": ""
@@ -118,7 +119,8 @@
         "tags": [
           "User"
         ],
-        "description": "Show Current User",
+        "summary": "Show Current User",
+        "description": "",
         "responses": {
           "default": {
             "description": ""
@@ -131,7 +133,8 @@
         "tags": [
           "User"
         ],
-        "description": "Update User",
+        "summary": "Update User",
+        "description": "",
         "responses": {
           "200": {
             "description": "OK"
@@ -144,7 +147,8 @@
         "tags": [
           "User"
         ],
-        "description": "Update User Password",
+        "summary": "Update User Password",
+        "description": "",
         "responses": {
           "default": {
             "description": ""
@@ -174,7 +178,8 @@
         "tags": [
           "User"
         ],
-        "description": "Get Single User",
+        "summary": "Get Single User",
+        "description": "",
         "parameters": [
           {
             "name": "id",

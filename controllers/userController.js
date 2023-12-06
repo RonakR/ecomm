@@ -5,7 +5,7 @@ const CustomError = require('../errors')
 const getAllUsers = async (req, res) => {
   /**
    * #swagger.tags = ['User']
-   * #swagger.description = 'Get All Users'
+   * #swagger.summary = 'Get All Users'
    */
   console.log('user', req.user)
   const users = await User.find({ role: 'user' }).select('-password')
@@ -15,7 +15,7 @@ const getAllUsers = async (req, res) => {
 const getSingleUser = async (req, res) => {
   /**
    * #swagger.tags = ['User']
-   * #swagger.description = 'Get Single User'
+   * #swagger.summary = 'Get Single User'
    */
   const user = await User.find({ _id: req.params.id }).select('-password')
   if (!user) {
@@ -27,7 +27,7 @@ const getSingleUser = async (req, res) => {
 const showCurrentUser = async (req, res) => {
   /**
    * #swagger.tags = ['User']
-   * #swagger.description = 'Show Current User'
+   * #swagger.summary = 'Show Current User'
    */
   res.status(StatusCodes.OK).json({ user: req.user })
 }
@@ -35,7 +35,7 @@ const showCurrentUser = async (req, res) => {
 const updateUser = async (req, res) => {
   /**
    * #swagger.tags = ['User']
-   * #swagger.description = 'Update User'
+   * #swagger.summary = 'Update User'
    */
   res.send('update user')
 }
@@ -43,7 +43,7 @@ const updateUser = async (req, res) => {
 const updateUserPassword = async (req, res) => {
   /**
    * #swagger.tags = ['User']
-   * #swagger.description = 'Update User Password'
+   * #swagger.summary = 'Update User Password'
    */
   const { oldPassword, newPassword } = req.body
   if (!oldPassword || !newPassword) {
