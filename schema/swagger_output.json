@@ -1,7 +1,7 @@
 {
   "openapi": "3.0.0",
   "info": {
-    "version": "0.0.1",
+    "version": "0.0.2",
     "title": "E-Comm",
     "description": "E-Commerce API",
     "contact": {
@@ -26,7 +26,7 @@
         "tags": [
           "Auth"
         ],
-        "summary": "Register a new user",
+        "summary": "Register a new user to db",
         "description": "Registers a user as admin or regular user",
         "responses": {
           "201": {
