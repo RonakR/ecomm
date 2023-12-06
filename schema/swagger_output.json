@@ -198,6 +198,7 @@
       }
     }
   },
+  "x-apiname": "ecomm",
   "security": [
     {
       "BasicAuth": []
