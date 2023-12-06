@@ -56,7 +56,7 @@ const login = async (req, res) => {
 const logout = async (req, res) => {
   /**
    * #swagger.tags = ['Auth']
-   * #swagger.summary = 'Logout a user'
+   * #swagger.summary = "Logout a user"
    * #swagger.description = "Ends a user's session by expiring the cookie"
    * #swagger.responses[200] = { description: "Ends a user's session" }
    */
