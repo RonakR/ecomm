@@ -11,7 +11,7 @@ jobs:
       api-version: ${{ steps.parse-api-version.outputs.value }}
     steps:
       - uses: actions/checkout@v3
-      - name: Install yq
+      - name: Install jq
         id: parse-api-version
         uses: sergeysova/jq-action@v2
         with:
