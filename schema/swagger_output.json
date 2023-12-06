@@ -114,7 +114,7 @@
         }
       }
     },
-    "/users/showMe": {
+    "/users/show-me": {
       "get": {
         "tags": [
           "User"
@@ -128,7 +128,7 @@
         }
       }
     },
-    "/users/updateUser": {
+    "/users/update-user": {
       "patch": {
         "tags": [
           "User"
@@ -142,7 +142,7 @@
         }
       }
     },
-    "/users/updateUserPassword": {
+    "/users/update-user-password": {
       "patch": {
         "tags": [
           "User"

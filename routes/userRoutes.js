@@ -18,9 +18,13 @@ router.get(
   [authenticateUser, authenticatePermissions('admin')],
   getAllUsers
 )
-router.get('/users/showMe', authenticateUser, showCurrentUser)
-router.patch('/users/updateUser', updateUser)
-router.patch('/users/updateUserPassword', authenticateUser, updateUserPassword)
+router.get('/users/show-me', authenticateUser, showCurrentUser)
+router.patch('/users/update-user', updateUser)
+router.patch(
+  '/users/update-user-password',
+  authenticateUser,
+  updateUserPassword
+)
 
 router.get('/users/:id', authenticateUser, getSingleUser)
 
