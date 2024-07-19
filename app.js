@@ -1,16 +1,17 @@
 // env vars
 require('dotenv').config()
 
-// postman
-const postman = require('@postman/postman-sdk')
-// postman telemetry
-if (process.env.NODE_ENV === 'production') {
-  postman.initialize({
-    collectionId: process.env.POSTMAN_COLLECTION_ID,
-    apiKey: process.env.POSTMAN_API_KEY,
-    enable: true,
-  })
-}
+//! Live Collections SDK has been deprecated
+// // postman
+// const postman = require('@postman/postman-sdk')
+// // postman telemetry
+// if (process.env.NODE_ENV === 'production') {
+//   postman.initialize({
+//     collectionId: process.env.POSTMAN_COLLECTION_ID,
+//     apiKey: process.env.POSTMAN_API_KEY,
+//     enable: true,
+//   })
+// }
 
 // treblle
 const { useTreblle } = require('treblle')
