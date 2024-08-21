@@ -14,7 +14,7 @@
 					"name": "register",
 					"item": [
 						{
-							"name": "Register a new user",
+							"name": "Register a new user TESTING FOR BRYAN",
 							"id": "610219d8-310e-4eb7-bf43-e652a8a59dcd",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -27,16 +27,6 @@
 										"value": "application/json"
 									}
 								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n  \"name\": {\n    \"example\": \"any\"\n  },\n  \"password\": {\n    \"example\": \"any\"\n  },\n  \"email\": {\n    \"example\": \"any\"\n  }\n}",
-									"options": {
-										"raw": {
-											"headerFamily": "json",
-											"language": "json"
-										}
-									}
-								},
 								"url": {
 									"raw": "{{baseUrl}}/auth/register",
 									"host": [
@@ -85,7 +75,39 @@
 									"status": "Created",
 									"code": 201,
 									"_postman_previewlanguage": "text",
-									"_postman_previewtype": "html",
+									"header": [],
+									"cookie": []
+								},
+								{
+									"id": "d7bdbc01-1472-4144-811f-0757cbccdd30",
+									"name": "User registered very successfully",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"name\": {\n    \"example\": \"any\"\n  },\n  \"password\": {\n    \"example\": \"any\"\n  },\n  \"email\": {\n    \"example\": \"any\"\n  }\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/auth/register",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"auth",
+												"register"
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "text",
 									"header": [],
 									"cookie": []
 								}
@@ -169,7 +191,6 @@
 									"status": "OK",
 									"code": 200,
 									"_postman_previewlanguage": "text",
-									"_postman_previewtype": "html",
 									"header": [],
 									"cookie": []
 								}
@@ -223,7 +244,6 @@
 									"status": "OK",
 									"code": 200,
 									"_postman_previewlanguage": "text",
-									"_postman_previewtype": "html",
 									"header": [],
 									"cookie": []
 								}
@@ -242,7 +262,7 @@
 					"name": "show-me",
 					"item": [
 						{
-							"name": "Show Current User",
+							"name": "Get Single User",
 							"id": "fdf8dd3f-b885-47e9-b166-89af4bbc1e58",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -282,7 +302,6 @@
 									"status": "Internal Server Error",
 									"code": 500,
 									"_postman_previewlanguage": "text",
-									"_postman_previewtype": "html",
 									"header": [],
 									"cookie": []
 								}
@@ -335,7 +354,6 @@
 									"status": "OK",
 									"code": 200,
 									"_postman_previewlanguage": "text",
-									"_postman_previewtype": "html",
 									"header": [],
 									"cookie": []
 								}
@@ -418,7 +436,6 @@
 									"status": "Internal Server Error",
 									"code": 500,
 									"_postman_previewlanguage": "text",
-									"_postman_previewtype": "html",
 									"header": [],
 									"cookie": []
 								}
@@ -483,7 +500,6 @@
 									"status": "Internal Server Error",
 									"code": 500,
 									"_postman_previewlanguage": "text",
-									"_postman_previewtype": "html",
 									"header": [],
 									"cookie": []
 								}
@@ -531,7 +547,6 @@
 							"status": "Internal Server Error",
 							"code": 500,
 							"_postman_previewlanguage": "text",
-							"_postman_previewtype": "html",
 							"header": [],
 							"cookie": []
 						}
@@ -545,7 +560,8 @@
 		{
 			"id": "84c4b8dd-a0a7-47d9-8841-1d5a123c8170",
 			"key": "baseUrl",
-			"value": "https://ecomm-k4ks.onrender.com/api/v1"
+			"value": "https://ecomm-k4ks.onrender.com/api/v1",
+			"type": "any"
 		}
 	]
 }
