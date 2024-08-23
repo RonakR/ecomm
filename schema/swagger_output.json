@@ -1,7 +1,7 @@
 {
   "openapi": "3.0.0",
   "info": {
-    "version": "0.0.4",
+    "version": "0.0.5",
     "title": "E-Comm",
     "description": "E-Commerce API",
     "contact": {
@@ -26,14 +26,11 @@
         "tags": [
           "Auth"
         ],
-        "summary": "Register a new user TESTING FOR BRYAN",
+        "summary": "Register a new user HACK HOUR",
         "description": "Registers a user as admin or regular user",
         "responses": {
           "201": {
             "description": "User registered successfully"
-          },
-          "204": {
-            "description": "User registered very successfully"
           }
         },
         "requestBody": {
@@ -109,6 +106,20 @@
           "User"
         ],
         "summary": "Get All Users",
+        "description": "",
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/users/show-me": {
+      "get": {
+        "tags": [
+          "User"
+        ],
+        "summary": "Show Current User",
         "description": "",
         "responses": {
           "default": {
