@@ -6,7 +6,7 @@ const { attachCookiesToResponse, createTokenUser } = require('../utils')
 const register = async (req, res) => {
   /**
    * #swagger.tags = ['Auth']
-   * #swagger.summary = 'Register a new user HACK HOUR'
+   * #swagger.summary = 'Register a new user TEST FOR EY'
    * #swagger.description = 'Registers a user as admin or regular user'
    * #swagger.responses[201] = { description: 'User registered successfully' }
    */
