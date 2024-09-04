@@ -14,7 +14,7 @@
 					"name": "register",
 					"item": [
 						{
-							"name": "Register a new user TEST FOR EY",
+							"name": "Register a new user",
 							"id": "610219d8-310e-4eb7-bf43-e652a8a59dcd",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
