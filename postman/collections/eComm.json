@@ -11,7 +11,7 @@
 			"name": "Auth",
 			"item": [
 				{
-					"name": "Register a new user TESTING FOR EY",
+					"name": "Register a new user",
 					"id": "1ed44fc1-b18c-486c-991b-c755e075e435",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
