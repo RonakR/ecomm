@@ -8,18 +8,6 @@ const register = async (req, res) => {
    * #swagger.tags = ['Auth']
    * #swagger.summary = 'Register a new user'
    * #swagger.description = 'Registers a user as admin or regular user'
-   * #swagger.requestBody = {
-            required: true,
-            content: {
-                "application/json": {
-                    schema: {
-                        "name": "{{name}}",
-                        "email": "{{email}}",
-                        "password": "{{password}}"
-                    }  
-                }
-            }
-        } 
    * #swagger.responses[201] = { description: 'User registered successfully' }
    */
   // first registered user is an admin
