@@ -12,6 +12,21 @@
 			"item": [
 				{
 					"name": "Register a new user TESTING FOR EY",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "0eecaaa4-6676-400c-a551-80b615c5a844",
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {",
+									"    pm.response.to.have.status(400);",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
 					"id": "1ed44fc1-b18c-486c-991b-c755e075e435",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
