@@ -34,21 +34,13 @@
           }
         },
         "requestBody": {
+          "required": true,
           "content": {
             "application/json": {
               "schema": {
-                "type": "object",
-                "properties": {
-                  "name": {
-                    "example": "any"
-                  },
-                  "password": {
-                    "example": "any"
-                  },
-                  "email": {
-                    "example": "any"
-                  }
-                }
+                "name": "{{name}}",
+                "email": "{{email}}",
+                "password": "{{password}}"
               }
             }
           }
