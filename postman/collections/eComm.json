@@ -12,75 +12,7 @@
 			"item": [
 				{
 					"name": "register",
-					"item": [
-						{
-							"name": "Register a new user",
-							"id": "610219d8-310e-4eb7-bf43-e652a8a59dcd",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									}
-								],
-								"url": {
-									"raw": "{{baseUrl}}/auth/register",
-									"host": [
-										"{{baseUrl}}"
-									],
-									"path": [
-										"auth",
-										"register"
-									]
-								},
-								"description": "Registers a user as admin or regular user"
-							},
-							"response": [
-								{
-									"id": "015f45d5-37cb-41b6-8102-da55d49412ce",
-									"name": "User registered successfully",
-									"originalRequest": {
-										"method": "POST",
-										"header": [
-											{
-												"key": "Content-Type",
-												"value": "application/json"
-											}
-										],
-										"body": {
-											"mode": "raw",
-											"raw": "{\n  \"name\": {\n    \"example\": \"any\"\n  },\n  \"password\": {\n    \"example\": \"any\"\n  },\n  \"email\": {\n    \"example\": \"any\"\n  }\n}",
-											"options": {
-												"raw": {
-													"headerFamily": "json",
-													"language": "json"
-												}
-											}
-										},
-										"url": {
-											"raw": "{{baseUrl}}/auth/register",
-											"host": [
-												"{{baseUrl}}"
-											],
-											"path": [
-												"auth",
-												"register"
-											]
-										}
-									},
-									"status": "Created",
-									"code": 201,
-									"_postman_previewlanguage": "text",
-									"header": [],
-									"cookie": []
-								}
-							]
-						}
-					],
+					"item": [],
 					"id": "55129873-e969-4f2e-bc54-412a80e92c87"
 				},
 				{
