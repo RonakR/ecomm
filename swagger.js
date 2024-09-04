@@ -6,7 +6,7 @@ const endpointsFiles = ['./routes/authRoutes.js', './routes/userRoutes.js']
 const doc = {
   'x-apiname': 'ecomm',
   info: {
-    version: '0.0.6',
+    version: '0.0.7',
     title: 'E-Comm',
     description: 'E-Commerce API',
     contact: {
