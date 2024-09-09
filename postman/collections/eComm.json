@@ -11,19 +11,19 @@
 			"name": "Auth",
 			"item": [
 				{
-					"name": "Register a new user TESTING FOR EY",
+					"name": "Register a new user",
 					"event": [
 						{
 							"listen": "test",
 							"script": {
 								"id": "0eecaaa4-6676-400c-a551-80b615c5a844",
+								"type": "text/javascript",
+								"packages": {},
 								"exec": [
 									"pm.test(\"Status code is 400\", function () {",
 									"    pm.response.to.have.status(400);",
 									"});"
-								],
-								"type": "text/javascript",
-								"packages": {}
+								]
 							}
 						}
 					],
